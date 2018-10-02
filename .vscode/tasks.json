@@ -7,7 +7,7 @@
     "args": [
         "-g",
         "-Wall",
-        "${workspaceRoot}/t3-5.c",
+        "${workspaceRoot}/t4-3.c",
         "-lapue"
     ],
     "presentation.reveal": "always"
