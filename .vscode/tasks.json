@@ -7,8 +7,9 @@
     "args": [
         "-g",
         "-Wall",
-        "${workspaceRoot}/t4-24.c",
+        "${workspaceRoot}/t4-25.c",
         "-lapue"
     ],
-    "presentation.reveal": "always"
+    "presentation.reveal": "always",
+    "problemMatchers": []
 }
