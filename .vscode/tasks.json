@@ -2,13 +2,13 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "2.0.0",
-    "command": "g++",
+    "command": "gcc",
     "type.shell": true,
     "args": [
         "-g",
         "-Wall",
-        "${workspaceRoot}/stringtt.cpp",
-        "-std=c++11",
+        "${workspaceRoot}/t5-11.c",
+        // "-std=c++11",
         "-lapue"
     ],
     "presentation.reveal": "always",
