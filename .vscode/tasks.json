@@ -7,7 +7,7 @@
     "args": [
         "-g",
         "-Wall",
-        "${workspaceRoot}/t6-11.c",
+        "${workspaceRoot}/t7-1.c",
         // "-std=c++11",
         "-lapue"
     ],
