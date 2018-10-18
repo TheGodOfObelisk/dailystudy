@@ -7,9 +7,9 @@
     "args": [
         "-g",
         "-Wall",
-        "${workspaceRoot}/t7-1.c",
+        "${workspaceRoot}/dosattack.c",
         // "-std=c++11",
-        "-lapue"
+        // "-lapue"
     ],
     "presentation.reveal": "always",
     "problemMatchers": []
