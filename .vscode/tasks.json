@@ -7,7 +7,7 @@
     "args": [
         "-g",
         "-Wall",
-        "${workspaceRoot}/strfile.cpp",
+        "${workspaceRoot}/vect1.cpp",
         "-std=c++11",
         // "-lapue"
     ],
