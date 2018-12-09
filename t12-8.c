@@ -3,7 +3,7 @@
 #include <time.h>
 #include <sys/time.h>
 
-extern int makethread(void *(*)(void *), void *);
+int makethread(void *(*)(void *), void *);
 
 struct to_info{
     void (*to_fn)(void *);/* function */
@@ -102,7 +102,7 @@ int main(void){
         /* 
          * Calculate the absolute time when we want to retry.
          */
-        check_gettime(CLOCK_REALTIME, &when);
+        clock_gettime(CLOCK_REALTIME, &when);
         when.tv_sec += 10;  /* 10 seconds from now */
         timeout(&when, retry, (void *)((unsigned long)arg));
     }
@@ -111,4 +111,19 @@ int main(void){
     /* continue processing ... */
 
     exit(0);
+}
+
+int makethread(void *(*fn)(void *), void *arg){
+    int err;
+    pthread_t tid;
+    pthread_attr_t attr;
+
+    err = pthread_attr_init(&attr);
+    if(err != 0)
+        return(err);
+    err = pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED);
+    if(err == 0)
+        err = pthread_create(&tid, &attr, fn, &arg);
+    pthread_attr_destroy(&attr);
+    return(err);
 }
