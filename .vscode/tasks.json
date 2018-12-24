@@ -7,11 +7,11 @@
     "args": [
         "-g",
         "-Wall",
-        "${workspaceRoot}/t14-27.c",
+        "${workspaceRoot}/t15-6.c",
         // "-std=c++11"
         "-lapue",
-        "-pthread",
-        "-lrt"
+        "-pthread"
+        // "-lrt"
     ],
     "presentation.reveal": "always",
     "problemMatchers": []
