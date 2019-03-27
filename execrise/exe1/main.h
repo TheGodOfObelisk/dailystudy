@@ -19,4 +19,6 @@ private:
     double min, max, sum, last_num;
 };
 
+statistician operator +(statistician& a, statistician& b);
+
 #endif
