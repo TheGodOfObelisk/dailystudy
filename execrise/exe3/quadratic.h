@@ -11,6 +11,9 @@ public:
     double get_b() const;
     double get_c() const;
     double evaluate_exp(double x);
+    int root_num();
+    double root1();
+    double root2();
 private:
     double a, b, c;
 };
