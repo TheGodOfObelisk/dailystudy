@@ -12,6 +12,7 @@ public:
     void set_parameters(int a, int b, int c, int d);
     int generate_number();
     double generate_double_number();
+    double generate_gaussian_sequence();
 private:
     int multiplier, seed, increment, modulus;
 };

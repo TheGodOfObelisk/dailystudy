@@ -16,30 +16,21 @@ unsigned int range[NUM] = {0};
 void update_list(double r);
 void print_list();
 
+extern int ne;
+
 int main(){
     pseudorandom_generator a(40, 725, 729, 1);
     cout << "Test 1: multiplier = 40, increment = 725, modulus = 729, seed = 1" << endl;
     int i = 0;
     while(i < 1000000){
         // a.generate_number();
-        double r = a.generate_double_number();
+        // double r = a.generate_double_number();
+        double r = a.generate_gaussian_sequence();
         update_list(r);
         i++;
     }
     print_list();
-    pseudorandom_generator b(35, 899, 938, 37);
-    cout << "Test 1: multiplier = 35, increment = 899, modulus = 938, seed = 37" << endl;
-    i = 0;
-    for(int j = R1; j <= R10; j++){
-        range[j] = 0;// reinitialize
-    }
-    while(i < 1000000){
-        // a.generate_number();
-        double r = b.generate_double_number();
-        update_list(r);
-        i++;
-    }
-    print_list();
+    cout << ne << endl;
     return 0;
 }
 
