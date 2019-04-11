@@ -23,6 +23,16 @@
         "type_traits": "cpp",
         "typeinfo": "cpp",
         "iomanip": "cpp",
-        "cassert": "cpp"
+        "cassert": "cpp",
+        "array": "cpp",
+        "ctime": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "fstream": "cpp",
+        "functional": "cpp",
+        "memory": "cpp",
+        "sstream": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp"
     }
 }
