@@ -58,7 +58,4 @@ int main(){
 void print_list(){
     cout << "******operations******" << endl;
     cout << "1: n days passed" << endl;
-    cout << "2. show date" << endl;
-    cout << "3. exit" << endl;
-    cout << "**********************" << endl;
 }
