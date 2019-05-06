@@ -4,7 +4,7 @@ public:
     complex(){real = imagine = 0;};
     complex(double a, double b){
         real = a;
-        b = imagine;
+        imagine = b;
     };
     // double get_real();
     // double get_imagine();

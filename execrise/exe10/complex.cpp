@@ -1,14 +1,9 @@
 #include "complex.h"
 #include <iostream>
+#include <cassert>
+#include <cmath>
+
 using namespace std;
-
-// double complex::get_imagine(){
-//     return imagine;
-// }
-
-// double complex::get_real(){
-//     return real;
-// }
 
 void complex::print_info(){
     if(real == 0 && imagine != 0){
@@ -20,11 +15,15 @@ void complex::print_info(){
     }
     // 到这里real不为0
     cout << real;
-    if(imagine > 0){
+    if(imagine > 0 && imagine != 1){
         cout << "+" << imagine << "i" << endl;
-    } else if(imagine < 0){
-        cout << "-" << imagine << "i" << endl;
-    } else {
+    } else if(imagine == 1){
+        cout << "+i" << endl;
+    } else if(imagine < 0 && imagine != -1){
+        cout << imagine << "i" << endl;
+    } else if(imagine == -1){
+        cout << "-i" << endl;
+    } else {// imagine == 0
         cout << endl;
     }
     return;
@@ -48,4 +47,9 @@ complex operator *(const complex &a, const complex &b){
     return complex(n, m);
 }
 
-complex operator /(const complex &a, const complex &b);
+complex operator /(const complex &a, const complex &b){
+    assert(!(b.real == 0 && b.real == 0));
+    double n = (a.real*b.real+a.imagine*b.imagine)/(pow(b.real, 2)+pow(b.imagine, 2));
+    double m = (a.imagine*b.real-a.real*b.imagine)/(pow(b.real, 2)+pow(b.imagine, 2));
+    return complex(n, m);
+}
