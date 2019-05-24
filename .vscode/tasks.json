@@ -7,8 +7,8 @@
     "args": [
         "-g",
         "-Wall",
-        "${workspaceRoot}/execrise/exe11/main.cpp",
-        "${workspaceRoot}/execrise/exe11/fueler.cpp",
+        "${workspaceRoot}/execrise/exe12/main.cpp",
+        "${workspaceRoot}/execrise/exe12/bag1.cpp",
         // "-std=c++11"
         // "-lapue",
         "-pthread"
