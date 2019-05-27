@@ -74,6 +74,18 @@ namespace main_savitch_3
 	used += addend.used;
     }
 
+    void bag::operator -=(const bag& subend){
+        // assert(size() - subend.size() >= 0);
+        for(size_type i = 0; i < subend.used; i++){
+            for(size_type j = 0; j < this->used; j++){
+                if(subend.data[i] == this->data[j]){
+                    this->erase_one(subend.data[i]);
+                    continue;
+                }
+            }
+        }
+    }
+
     bag::size_type bag::count(const value_type& target) const
     {
         size_type answer;
@@ -95,6 +107,15 @@ namespace main_savitch_3
 
         answer += b1; 
         answer += b2;
+        return answer;
+    }
+
+    bag operator -(const bag& b1, const bag& b2){
+        bag answer;
+
+        // assert(b1.size() - b2.size() >= 0);
+        answer = b1;
+        answer -= b2;
         return answer;
     }
 }

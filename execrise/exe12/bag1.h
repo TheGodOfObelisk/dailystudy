@@ -72,6 +72,7 @@ namespace main_savitch_3
         bool erase_one(const value_type& target);
         void insert(const value_type& entry);
         void operator +=(const bag& addend);
+        void operator -=(const bag& subend);
         // CONSTANT MEMBER FUNCTIONS
         size_type size( ) const { return used; }
         size_type count(const value_type& target) const;
@@ -82,6 +83,7 @@ namespace main_savitch_3
 
     // NONMEMBER FUNCTIONS for the bag class
     bag operator +(const bag& b1, const bag& b2);
+    bag operator -(const bag& b1, const bag& b2);
 }
 
 #endif

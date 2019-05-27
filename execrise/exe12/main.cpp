@@ -26,15 +26,16 @@ int main(){
     cout << "bag2 = bag1 + bag2" << endl;
     bag2 += bag1;
     cout << "How many 2s in bag2?" << endl;
-    cout << "Here are " << bag2.count(2) << "2(s)" << endl;
+    cout << "Here are " << bag2.count(2) << " 2(s)" << endl;
     cout << "Try to erase 2 from bag2." << endl;
     cout << "Erase " << bag2.erase(2) << " 2(s) from bag2" << endl;
     cout << "How many 2s in bag2 now?" << endl;
-    cout << "Here are " << bag2.count(2) << "2(s)" << endl;
+    cout << "Here are " << bag2.count(2) << " 2(s)" << endl;
     cout << "How many item(s) in bag2 now?" << endl;
-    cout << "Here are " << bag2.size() << "item(s) in bag2 now." << endl;
+    cout << "Here are " << bag2.size() << " item(s) in bag2 now." << endl;
 
-    cout << "bag3 = bag1 + bag2, items exceed" << endl;
-    main_savitch_3::bag bag3 = bag1 + bag2;
+    cout << "bag3 = bag1 - bag2" << endl;
+    main_savitch_3::bag bag3 = bag1 - bag2;
+    cout << "The size of bag3: " << bag3.size() << endl;
     return 0;
 }
