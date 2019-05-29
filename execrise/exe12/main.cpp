@@ -1,9 +1,12 @@
 #include <iostream>
 #include "bag1.h"
+#include <string>
+
 
 using namespace std;
 
 int main(){
+    string girl = "Anna";
     // prepare to test
     main_savitch_3::bag bag1;// 现在是空的
     cout << "Declare a new bag called bag1." << endl;
