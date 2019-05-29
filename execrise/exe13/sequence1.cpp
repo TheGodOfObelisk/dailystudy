@@ -85,3 +85,64 @@ sequence::value_type sequence::current() const{
     assert(is_item());
     return data[current_index];
 }
+
+void sequence::insert_head(const value_type& entry){
+    assert(size() < CAPACITY);
+    size_t i = size();
+    for(; i > 0; i--){
+        data[i] = data[i-1];//数据后移
+    }
+    // i = 0
+    data[i] = entry;
+    used++;
+}
+
+void sequence::remove_head(){
+    assert(size() > 0);
+    size_t i = 0;
+    for(; i < size(); i++){
+        data[i] = data[i+1];
+    }
+    used--;
+}
+
+void sequence::insert_tail(const value_type& entry){
+    assert(size() < CAPACITY);
+    data[size()] = entry;
+    used++;    
+}
+
+void sequence::end(){
+    current_index = size() - 1;
+}
+
+sequence sequence::operator -(sequence& entry){
+    sequence res;
+    for(this->start(); this->is_item(); this->advance()){
+        res.insert(this->current());
+    }
+    for(entry.start(); entry.is_item(); entry.advance()){
+        for(res.start(); res.is_item(); res.advance()){
+            if(res.current() == entry.current()){
+                res.remove_current();
+            }
+        }
+    }
+    return res;
+}
+
+void sequence::operator -=(sequence& entry){
+    for(entry.start(); entry.is_item(); entry.advance()){
+        for(start(); is_item(); advance()){
+            if(entry.current() == current()){
+                remove_current();
+            }
+        }
+    }
+}
+
+// void sequence::operator =(const sequence& entry){
+//     for(entry.start(); entry.is_item(); entry.advance()){
+//         this->insert(entry.current());
+//     }
+// }

@@ -26,7 +26,7 @@ double get_number( );
 
 int main( )
 {
-    sequence test; // A sequence that we’ll perform tests on
+    sequence test, test1, test2; // A sequence that we’ll perform tests on
     char choice;   // A command character entered by the user
     
     cout << "I have initialized an empty sequence of real numbers." << endl;
@@ -38,6 +38,8 @@ int main( )
         switch (choice)
         {
             case '!': test.start( );
+                      break;
+            case '@': test.end();
                       break;
             case '+': test.advance( );
                       break;
@@ -61,7 +63,29 @@ int main( )
                       break;
             case 'R': test.remove_current( );
                       cout << "The current item has been removed." << endl;
+                      break;
+            case 'H': test.insert_head(get_number());
+                      break;
+            case 'L': test.remove_head();
+                      cout << "The item in the head has been removed." << endl;
                       break;     
+            case 'Z': test.insert_tail(get_number());
+                      cout << "A new item has been inserted into the tail." << endl;
+                      break;
+            case 'T': test1.insert(1);
+                      test1.insert(2);
+                      test1.insert(3);
+                      cout << "test:" << endl;
+                      show_sequence(test);
+                      cout << "test1:" << endl;
+                      show_sequence(test1);
+                      test2 = test - test1;
+                      cout << "test2 = test - test1, its result is" << endl;
+                      show_sequence(test2);
+                      test -= test1;
+                      cout << "test -= test1, its result is" << endl;
+                      show_sequence(test);
+                      break;
             case 'Q': cout << "Ridicule is the best test of truth." << endl;
                       break;
             default:  cout << choice << " is invalid." << endl;
@@ -78,6 +102,7 @@ void print_menu( )
     cout << endl; // Print blank line before the menu
     cout << "The following choices are available: " << endl;
     cout << " !   Activate the start( ) function" << endl;
+    cout << " @   Activate the end() function" << endl;
     cout << " +   Activate the advance( ) function" << endl;
     cout << " ?   Print the result from the is_item( ) function" << endl;
     cout << " C   Print the result from the current( ) function" << endl;
@@ -86,6 +111,10 @@ void print_menu( )
     cout << " I   Insert a new number with the insert(...) function" << endl;
     cout << " A   Attach a new number with the attach(...) function" << endl;
     cout << " R   Activate the remove_current( ) function" << endl;
+    cout << " H   Insert a new item with insert_head() function" << endl;
+    cout << " L   Remove an item with remove_head() function" << endl;
+    cout << " Z   Insert a new item with insert_tail() function" << endl;
+    cout << " T   Test the operator - and -=" << endl;
     cout << " Q   Quit this test program" << endl;
 }
 

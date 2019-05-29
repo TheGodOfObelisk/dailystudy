@@ -88,6 +88,13 @@ namespace main_savitch_3
         void insert(const value_type& entry);
         void attach(const value_type& entry);
         void remove_current( );
+        void insert_head(const value_type& entry);
+        void remove_head();
+        void insert_tail(const value_type& entry);
+        void end();
+        sequence operator -(sequence& entry);
+        void operator -=(sequence& entry);
+        // void operator =(const sequence& entry);
         // CONSTANT MEMBER FUNCTIONS
         size_type size( ) const;
         bool is_item( ) const;
