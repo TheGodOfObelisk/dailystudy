@@ -94,6 +94,7 @@ namespace main_savitch_3
         void end();
         sequence operator -(sequence& entry);
         void operator -=(sequence& entry);
+        value_type operator [](size_type index) const;
         // void operator =(const sequence& entry);
         // CONSTANT MEMBER FUNCTIONS
         size_type size( ) const;

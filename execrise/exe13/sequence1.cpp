@@ -141,6 +141,11 @@ void sequence::operator -=(sequence& entry){
     }
 }
 
+sequence::value_type sequence::operator [](size_type index) const{
+    assert(index >= 0 && index < size());
+    return data[index];
+}
+
 // void sequence::operator =(const sequence& entry){
 //     for(entry.start(); entry.is_item(); entry.advance()){
 //         this->insert(entry.current());

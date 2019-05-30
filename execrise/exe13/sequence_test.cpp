@@ -86,6 +86,8 @@ int main( )
                       cout << "test -= test1, its result is" << endl;
                       show_sequence(test);
                       break;
+            case 'G': cout << "The item is " << test[get_number()] << endl;
+                      break;
             case 'Q': cout << "Ridicule is the best test of truth." << endl;
                       break;
             default:  cout << choice << " is invalid." << endl;
@@ -115,6 +117,7 @@ void print_menu( )
     cout << " L   Remove an item with remove_head() function" << endl;
     cout << " Z   Insert a new item with insert_tail() function" << endl;
     cout << " T   Test the operator - and -=" << endl;
+    cout << " G   Test the operator []" << endl;
     cout << " Q   Quit this test program" << endl;
 }
 
