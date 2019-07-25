@@ -1,0 +1,51 @@
+Declare a new bag called bag1.
+Keep inserting new items into bag1 until it is full.
+Now there are 1 item(s) in bag1.
+Now there are 2 item(s) in bag1.
+Now there are 3 item(s) in bag1.
+Now there are 4 item(s) in bag1.
+Now there are 5 item(s) in bag1.
+Now there are 6 item(s) in bag1.
+Now there are 7 item(s) in bag1.
+Now there are 8 item(s) in bag1.
+Now there are 9 item(s) in bag1.
+Now there are 10 item(s) in bag1.
+Now there are 11 item(s) in bag1.
+Now there are 12 item(s) in bag1.
+Now there are 13 item(s) in bag1.
+Now there are 14 item(s) in bag1.
+Now there are 15 item(s) in bag1.
+Now there are 16 item(s) in bag1.
+Now there are 17 item(s) in bag1.
+Now there are 18 item(s) in bag1.
+Now there are 19 item(s) in bag1.
+Now there are 20 item(s) in bag1.
+Now there are 21 item(s) in bag1.
+Now there are 22 item(s) in bag1.
+Now there are 23 item(s) in bag1.
+Now there are 24 item(s) in bag1.
+Now there are 25 item(s) in bag1.
+Now there are 26 item(s) in bag1.
+Now there are 27 item(s) in bag1.
+Now there are 28 item(s) in bag1.
+Now there are 29 item(s) in bag1.
+Now there are 30 item(s) in bag1.
+Erase one item from bag1.
+Succeed to erase 28 from bag1.
+Insert another item (-2) into bag1.
+Remove -2 from bag1.
+The item that we just removed is -2.
+Now there are 29 item(s) in bag1.
+Declare bag2
+Insert 2 into bag2
+bag2 = bag1 + bag2
+How many 2s in bag2?
+Here are 2 2(s)
+Try to erase 2 from bag2.
+Erase 2 2(s) from bag2
+How many 2s in bag2 now?
+Here are 0 2(s)
+How many item(s) in bag2 now?
+Here are 28 item(s) in bag2 now.
+bag3 = bag1 - bag2
+The size of bag3: 1
