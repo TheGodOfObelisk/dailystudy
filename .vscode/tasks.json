@@ -7,8 +7,8 @@
     "args": [
         "-g",
         "-Wall",
-        "${workspaceRoot}/execrise/exe15/my_set.cpp",
-        "${workspaceRoot}/execrise/exe15/main.cpp",
+        "${workspaceRoot}/execrise/exe16/sorted_sequence.cpp",
+        "${workspaceRoot}/execrise/exe16/main.cpp",
         // "-std=c++11"
         // "-lapue",
         "-pthread"
